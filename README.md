@@ -1,8 +1,5 @@
 # TheMeanOnesServersideWorkstationExpansionv2---7D2D
 
-
-# TheMeanOnes Server-Side Workstation Expansion v2 is a transformative mod for 7 Days to Die that introduces 10 unique craftable workstations, a custom Workstation Expansion Skill Tree, and numerous features designed to enrich gameplay. This mod focuses on improving resource management, strategic planning, and overall player progression without overhauling the core gameplay, making it a perfect addition for both single-player and multiplayer experiences.
-
 # Core Features
 10 Unique Workstations
 Each workstation is designed to generate specific resources over time, with periodic surprise drops to keep gameplay exciting. Players can strategically place and move workstations before collection, ensuring adaptability for evolving base layouts and survival strategies.
