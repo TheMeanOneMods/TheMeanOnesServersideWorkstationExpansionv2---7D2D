@@ -1,0 +1,47 @@
+﻿<Progression>
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<!-- Workstation Related Unlocks and Looting -->
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	<insertAfter xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']">
+		<crafting_skill name="perkWorkstationExpansion" max_level="65" parent="attCrafting" name_key="[00FF00]Workstation Expansion" desc_key="Unlock advanced workstations to help Survive the Apocalypse" long_desc_key="Expand your crafting capabilities with unique and advanced workstations for farming, harvesting, and more." icon="ui_game_symbol_assemble">
+			<!-- Tier 1 Unlocks -->
+			<display_entry icon="hayBaleSquare" name_key="Workstation Expansion T1 - Foundations of Survival" has_quality="false" unlock_level="5,8">
+				<unlock_entry item="TM1ChickenCoopStage0" unlock_tier="1"/>
+				<unlock_entry item="TM1HiveStage0" unlock_tier="2"/>
+			</display_entry>
+			<!-- Tier 2 Unlocks -->
+			<display_entry icon="tankPropaneWhite" name_key="Workstation Expansion T2 - Gathering Essentials" has_quality="false" unlock_level="12,15,13">
+				<unlock_entry item="TM1WaterCollectorStage0" unlock_tier="1"/>
+				<unlock_entry item="TM1OilStage0" unlock_tier="2"/>
+				<unlock_entry item="TM1HydroStationStage0" unlock_tier="3"/>
+			</display_entry>
+			<!-- Tier 3 Unlocks -->
+			<display_entry icon="excavatorClawWhite" name_key="Workstation Expansion T3 - Resource Masters" has_quality="false" unlock_level="23,25">
+				<unlock_entry item="TM1RockExcavatorStage0" unlock_tier="1"/>
+				<unlock_entry item="TM1LoggingSiteStage0" unlock_tier="2"/>
+			</display_entry>
+			<!-- Tier 4 Unlocks -->
+			<display_entry icon="cntFreezerGroceriesMiddleEmptyOpen" name_key="Workstation Expansion T4 - Tools of Survival" has_quality="false" unlock_level="48,55,65">
+				<unlock_entry item="TM1AmmoWorkstationStage0" unlock_tier="1"/>
+				<unlock_entry item="TM1MedicalStationStage0" unlock_tier="2"/>
+				<unlock_entry item="TM1GroceryNameDelivery" unlock_tier="3"/>
+			</display_entry>
+			<effect_group>
+				<!-- Tier 1 Effects -->
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="TM1ChickenCoopStage0,perkWorkstationExpansion"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="TM1HiveStage0,perkWorkstationExpansion"/>
+				<!-- Tier 2 Effects -->
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,100" value="1" tags="TM1WaterCollectorStage0,perkWorkstationExpansion"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="13,100" value="1" tags="TM1HydroStationStage0,perkWorkstationExpansion"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,100" value="1" tags="TM1OilStage0,perkWorkstationExpansion"/>
+				<!-- Tier 3 Effects -->
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="23,100" value="1" tags="TM1RockExcavatorStage0"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="TM1LoggingSiteStage0"/>
+				<!-- Tier 4 Effects -->
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="48,100" value="1" tags="TM1AmmoWorkstationStage0"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,100" value="1" tags="TM1MedicalStationStage0"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65,100" value="1" tags="TM1GroceryNameDelivery"/>
+			</effect_group>
+		</crafting_skill>
+	</insertAfter>
+</Progression>

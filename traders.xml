@@ -1,0 +1,5 @@
+<Config>
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='traderAlways']">
+		<item name="TheMeanOne_WorkstationExpansion" count="1"/>
+	</append>
+</Config>

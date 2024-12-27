@@ -1,0 +1,74 @@
+<MeanOne>
+	<append xpath="/recipes">
+		<!-- Water Collector Stage 1 - Tier 1 -->
+		<recipe name="TM1WaterCollectorStage0" count="1" craft_time="120" tags="learnable,perkWorkstationExpansionT1,TM1WaterCollectorStage1">
+			<ingredient name="resourceScrapPolymers" count="50"/>
+			<ingredient name="resourceScrapIron" count="200"/>
+			<ingredient name="bucketEmpty" count="1"/>
+		</recipe>
+		<!-- Hive Stage 1 - Tier 1 -->
+		<recipe name="TM1HiveStage0" count="1" craft_time="120" tags="learnable,perkWorkstationExpansionT1">
+			<ingredient name="resourceWood" count="75"/>
+			<ingredient name="resourceYuccaFibers" count="75"/>
+			<ingredient name="foodHoney" count="15"/>
+		</recipe>
+		<!-- Chicken Coop Stage 1 - Tier 1 -->
+		<recipe name="TM1ChickenCoopStage0" count="1" craft_time="120" tags="learnable,perkWorkstationExpansionT1">
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceYuccaFibers" count="400"/>
+			<ingredient name="resourceFeather" count="35"/>
+			<ingredient name="foodEgg" count="18"/>
+		</recipe>
+		<!-- Oil Reserve Tank Stage  - Tier 2 -->
+		<recipe name="TM1OilStage0" count="1" craft_time="180" tags="learnable,perkWorkstationExpansionT2,TM1OilStage1">
+			<ingredient name="ammoGasCan" count="100"/>
+			<ingredient name="resourceScrapIron" count="300"/>
+			<!-- Reduced cost -->
+			<ingredient name="resourceForgedSteel" count="3"/>
+			<!-- Reduced cost -->
+		</recipe>
+		<!-- Rock Quarry Excavator Stage  - Tier 3 -->
+		<recipe name="TM1RockExcavatorStage0" count="1" craft_time="240" tags="learnable,perkWorkstationExpansionT3">
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<!-- Reduced cost -->
+			<ingredient name="resourceOil" count="15"/>
+			<!-- Reduced cost -->
+			<ingredient name="resourceMechanicalParts" count="90"/>
+			<!-- Reduced cost -->
+		</recipe>
+		<!-- Logging Site Excavator Stage  - Tier 3 -->
+		<recipe name="TM1LoggingSiteStage0" count="1" craft_time="240" tags="learnable,perkWorkstationExpansionT3,attCrafting">
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<!-- Reduced cost -->
+			<ingredient name="resourceOil" count="15"/>
+			<!-- Reduced cost -->
+			<ingredient name="resourceMechanicalParts" count="90"/>
+			<!-- Reduced cost -->
+		</recipe>
+		<!-- Ammo and Weapons Storage Stage  - Tier 4 -->
+		<recipe name="TM1AmmoWorkstationStage0" count="1" craft_time="300" tags="learnable,perkWorkstationExpansionT4">
+			<ingredient name="resourceForgedSteel" count="60"/>
+			<ingredient name="resourceScrapIron" count="400"/>
+			<ingredient name="resourceBulletCasing" count="150"/>
+			<ingredient name="resourceBulletTip" count="150"/>
+		</recipe>
+		<!-- IV Stand - A  - Tier 4  -->
+		<recipe name="TM1MedicalStationStage0" count="1" craft_time="150" tags="learnable,perkWorkstationExpansionT4">
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="resourceGoldNugget" count="5"/>
+		</recipe>
+		<!-- Groceries Delivery   - Tier 4  -->
+		<recipe name="TM1GroceryNameDelivery" count="1" craft_time="300" tags="learnable,perkWorkstationExpansionT4">
+			<ingredient name="resourceBrokenGlass" count="50"/>
+			<ingredient name="resourceLegendaryParts" count="6"/>
+			<ingredient name="resourceElectricParts" count="70"/>
+		</recipe>
+		<!-- HydroPonics  - Tier 2  -->
+		<recipe name="TM1HydroStationStage0" count="1" craft_time="300" tags="learnable,perkWorkstationExpansionT2">
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+		</recipe>
+	</append>
+</MeanOne>
+

@@ -1,0 +1,52 @@
+<config>
+	<append xpath="/items">
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- Workstation Expansion Magazine -->
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<item name="TheMeanOne_WorkstationExpansion">
+			<property name="CustomIcon" value="cntBookPile08"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Tags" value="seedCSM,csm"/>
+			<property name="DescriptionKey" value="TheMeanOne_WorkstationExpansionDesc"/>
+			<property name="Unlocks" value="perkWorkstationExpansion"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="perkWorkstationExpansion" level="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="12"/>
+			</effect_group>
+		</item>
+		<item name="TheMeanOne_Money">
+			<property name="DescriptionKey" value="TheMeanOne_MoneyDesc"/>
+			<property name="CustomIcon" value="oldCash"/>
+			<property name="CustomIconTint" value="FFA500"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MoldCash"/>
+			<property name="HoldType" value="8"/>
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Stacknumber" value="75"/>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Repair_amount" value="25"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Sound_start" value="repair_block"/>
+				<property name="Delay" value="1.3"/>
+				<property name="Upgrade_action_sound" value="ImpactSurface/metalhitearth"/>
+				<property name="Allowed_upgrade_items" value="TheMeanOne_Money"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="MaxRange" operation="base_set" value="3"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="70"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="100"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+		</item>
+	</append>
+</config>

@@ -1,0 +1,69 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text
+
+<!-- Oil Refinery is Fixed -->
+TM1OilStage0,blocks,Block,,,"[00FF00]Oil Refinery",,
+TM1OilStage0Desc,blocks,Block,,,"This Refinery will produce oil and sometimes water with it just like any other refinery. Values vary but lets hope you hit the gold mine. [00FF00]Harvest Time: 35 Mins",,
+TM1OilStage1,blocks,Block,,,"Oil Refinery - [00FF00]Refining Oil",,
+TM1OilStage2,blocks,Block,,,"Oil Refinery - [00FF00]Lets Collect Our Oil Harvest!",,
+
+<!-- Water Collector is Fixed -->
+TM1WaterCollectorStage0,blocks,Block,,,"[00FF00]RainWater Collector",,
+TM1WaterCollectorStage0Desc,blocks,Block,,,"This Rain Water Collector will collect water for you to help keep you hydrated. It can be more efficiant than dew collectors because it offers additional benefits that are surprises. [00FF00]Harvest Time: 25 Mins",,
+TM1WaterCollectorStage1,blocks,Block,,,"RainWater Collector - [00FF00]Collecting Water",,
+TM1WaterCollectorStage2,blocks,Block,,,"Water Collector - [00FF00]Lets Collect Some Water!",,
+
+<!-- Hive is Fixed -->
+TM1HiveStage0,blocks,Block,,,"[00FF00]Bee Hive ",,
+TM1HiveStage0Desc,blocks,Block,,,"This bee Hive is germinated by bees and will produce honey and other rare resources sporadically. [00FF00]Harvest Time: 15 Mins",,
+TM1HiveStage1,blocks,Block,,,"Bee Hive - [00FF00]Germinating",,
+TM1HiveStage2,blocks,Block,,,"Bee Hive - [00FF00]Ready to Harvest!",,
+
+<!-- Rock Quarry is Fixed -->
+TM1RockExcavatorStage0,blocks,Block,,,"[00FF00]Rock Quarry ",,
+TM1RockExcavatorStage0Desc,blocks,Block,,,"The Rock Quarry gives rock as well as clay and some other goodies every so often. [00FF00]Harvest Time: 40 Mins",,
+TM1RockExcavatorStage1,blocks,Block,,,"Rock Quarry - [00FF00]Extracting Rock",,
+TM1RockExcavatorStage2,blocks,Block,,,"Rock Quarry - [00FF00]Ready to Collect!",,
+
+<!-- Coop is Fixed -->
+TM1ChickenCoopStage0,blocks,Block,,,"[00FF00]Chicken Coop",,
+TM1ChickenCoopStage0Desc,,,"The chicken coop will produce eggs - feathers and other valuables every so often. [00FF00]Harvest Time: 15 Mins",,
+TM1ChickenCoopStage1,blocks,Block,,,"Chicken Coop -[00FF00]Not Ready to Collect",,
+TM1ChickenCoopStage2,blocks,Block,,,"Chicken Coop - [00FF00]Ready for Harvest!",,
+
+<!-- Logging Site is Fixed -->
+TM1LoggingSiteStage0,blocks,Block,,,"[00FF00]Logging Station",,
+TM1LoggingSiteStage0Desc,blocks,Block,,,"This Logger provides top notch logs seeds and some other goodies every so often. [00FF00]Harvest Time: 30 Mins",,
+TM1LoggingSiteStage1,blocks,Block,,,"Logging Station - [00FF00]Currently Logging ",,
+TM1LoggingSiteStage2,blocks,Block,,,"Logging Site - [00FF00]Ready to Collect Log Harvest!",,
+
+<!-- Ammo Rack is Fixed -->
+TM1AmmoWorkstationStage0,blocks,Block,,,"[00FF00]Ammo Rack",,
+TM1AmmoWorkstationStage0Desc,blocks,Block,,,"This Ammo Rack Receives Shipments of Weapons, Ammo, Explosives and other valuables every so often. [00FF00]Harvest Time: 48 Mins",,
+TM1AmmoWorkstationStage1,blocks,Block,,,"Ammo Rack -  [00FF00]Pending Shipment",,
+TM1AmmoWorkstationStage2,blocks,Block,,,"Ammo Rack - [00FF00]Ready to Collect Shipment!",,
+
+<!-- Medical Station -->
+TM1MedicalStationStage0,blocks,Block,,,"[00FF00]Medical Station",,
+TM1MedicalStationStage0Desc,blocks,Block,,,"This medical station provides much needed medical supplies and goodies. [00FF00]Harvest Time: 15 Mins",,
+TM1MedicalStationStage1,blocks,Block,,,"Medical Station - [00FF00]Preparing Supplies",,
+TM1MedicalStationStage2,blocks,Block,,,"Medical Station - [00FF00]Ready to Collect Shipment!",,
+
+<!-- Grocery Station -->
+TM1GroceryNameDelivery,blocks,Block,,,"[00FF00]Grocery Delivery",,
+TM1GroceryNameDeliveryDesc,blocks,Block,,,"Who said Grocery shopping has to be difficult during an apocalypse? /n Hire someone to get delivery asap. [00FF00]Delivery Time: 15 Mins",,
+TM1GroceryDeliveryStageBuy,blocks,Block,,,"Grocery Delivery - Pay [FFA500]50 MeanBucks[-] to Order ",,
+TM1GroceryDeliveryStage0,blocks,Block,,,"[00FF00]Grocery Delivery",,
+TM1GroceryDeliveryStage1,blocks,Block,,,"Grocery Delivery - [00FF00]Grabbing Your Order!",,
+TM1GroceryDeliveryStage2,blocks,Block,,,"Groceries - [00FF00]Ready to Pickup!",,
+
+<!-- HydroPonics Workstation -->
+TM1HydroStationStage0,blocks,Block,,,"[00FF00]Hydroponic Farm",,
+TM1HydroStationStage0Desc,blocks,Block,,,"This farm grows plants, fruits and even gives off seeds! [00FF00]Harvest Time: 35 Mins",,
+TM1HydroStationStage1,blocks,Block,,," Hydroponic Farm - [00FF00]Growing Plants",,
+TM1HydroStationStage2,blocks,Block,,," Hydroponic Farm - [00FF00]Ready to Collect!",,
+
+TheMeanOne_WorkstationExpansion,items,item,,,"[00FF00]Workstation Expansion",,
+TheMeanOne_WorkstationExpansionDesc,items,item,,,"Reading this magazine will help you unlock up to 10 new workstations in Progression under the [00FF00]Workstations Expanded[-] category.",,
+
+TheMeanOne_Money,items,item,,,"Mean Money",,
+TheMeanOne_MoneyDesc,items,item,,,"Special Money thats used to get grocery deliveries with the Grocery Station ",,

@@ -1,0 +1,858 @@
+<MeanOne>
+	<append xpath="/blocks">
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- CUSTOM GROWTH MASTER PERAMETERS -->
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- Crops Master Block -->
+		<block name="TheMeanOne_CropGrowingMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="PlantGrowing.GrowthRate" value="63.0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="HarvestOverdamage" value="false"/>
+			<property name="CustomIcon" value="plantedBlueberry1"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="DescriptionKey" value="plantedCropsGroupDesc"/>
+			<property name="Material" value="Mplants"/>
+			<property name="Shape" value="BillboardPlant"/>
+			<property name="Mesh" value="grass"/>
+			<property name="Texture" value="395"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Collide" value="melee"/>
+			<property name="IsDecoration" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="CanDecorateOnSlopes" value="true"/>
+			<property name="VehicleHitScale" value=".1"/>
+			<property name="EconomicValue" value="20"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="M180"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="FilterTags" value="MC_outdoor,SC_crops"/>
+		</block>
+		<block name="TheMeanOne_CropHarvestingMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="HarvestOverdamage" value="false"/>
+			<property name="DisplayInfo" value="Description"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mplants"/>
+			<property name="Shape" value="BillboardPlant"/>
+			<property name="Mesh" value="grass"/>
+			<property name="Texture" value="395"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="IsDecoration" value="true"/>
+			<property name="SortOrder1" value="M190"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_outdoor,SC_crops"/>
+		</block>
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- PASSIVE WORKSTATIONS -->
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<!-- Oil Reserve Tank Station -->
+		<block name="TM1OilStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1OilStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value=".0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1OilStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="tankPropaneWhite"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<!-- Ensure this matches typical placement rules -->
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Industrial/tankPropanePrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0006"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1OilStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<!-- Stage 1: Upgraded Setup -->
+		<block name="TM1OilStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1OilStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="35"/>
+					<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="PlantGrowing.Next" value="TM1OilStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="tankPropaneWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Industrial/tankPropanePrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0007"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Oil Tank - Pumping Oil"/>
+			<drop event="Destroy" name="TM1OilStage1" count="1"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<block name="TM1OilStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1OilStage2Desc"/>
+			<property name="CustomIcon" value="tankPropaneWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Industrial/tankPropanePrefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1OilStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Oil"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Water Reserve Collector -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1WaterCollectorStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1WaterCollectorStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1WaterCollectorStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntBarrelWhiteQuadA"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Industrial/barrelWhiteQuadAPrefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0006"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1WaterCollectorStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1WaterCollectorStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1WaterCollectorStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="25"/>
+			<property name="PlantGrowing.Next" value="TM1WaterCollectorStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntBarrelWhiteQuadA"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Industrial/barrelWhiteQuadAPrefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0007"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Water Collector - Collecting Water"/>
+			<drop event="Destroy" name="TM1WaterCollectorStage1" count="1"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<block name="TM1WaterCollectorStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1WaterCollectorStage2Desc"/>
+			<property name="CustomIcon" value="cntBarrelWhiteQuadA"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Industrial/barrelWhiteQuadAPrefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1WaterCollectorStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Water"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Bee Hive Collector -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1HiveStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1HiveStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1HiveStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="treeStump"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0006"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1HiveStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1HiveStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1HiveStage1Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="15"/>
+			<property name="PlantGrowing.Next" value="TM1HiveStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="treeStump"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0007"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Hive - Germinating"/>
+			<drop event="Destroy" name="TM1HiveStage1" count="1"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<block name="TM1HiveStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1HiveStage2Desc"/>
+			<property name="CustomIcon" value="treeStump"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="#Entities/Trees?Prefabs/Stump.prefab"/>
+			<property name="TintColor" value="255,255,51"/>
+			<property name="CustomIconTint" value="255,255,51"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1HiveStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Hive"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Rock Quarry -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1RockExcavatorStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1RockExcavatorStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1RockExcavatorStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="excavatorWhite"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="10"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="@:Entities/Vehicles/Excavator/excavatorPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0006"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1RockExcavatorStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1RockExcavatorStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1RockExcavatorStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="40"/>
+			<property name="PlantGrowing.Next" value="TM1RockExcavatorStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="excavatorWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="10"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="@:Entities/Vehicles/Excavator/excavatorPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0007"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Excavator - Excavating"/>
+			<drop event="Destroy" name="TM1RockExcavatorStage1" count="1"/>
+			<property name="MaxDamage" value="800"/>
+		</block>
+		<block name="TM1RockExcavatorStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1RockExcavatorStage2Desc"/>
+			<property name="CustomIcon" value="excavatorWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="10"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="@:Entities/Vehicles/Excavator/excavatorPrefab.prefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1RockExcavatorStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Rock"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="800"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Chicken Coops  -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1ChickenCoopStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1ChickenCoopStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1ChickenCoopStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="hayBaleSquare"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/OutdoorDecor/hayBaleSquarePrefab"/>
+			<property name="ModelOffset" value="0,-0.2,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0006"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1ChickenCoopStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1ChickenCoopStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1ChickenCoopStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="15"/>
+			<property name="PlantGrowing.Next" value="TM1ChickenCoopStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="hayBaleSquare"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/OutdoorDecor/hayBaleSquarePrefab"/>
+			<property name="ModelOffset" value="0,-0.2,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0007"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Chicken Coop - Breeding"/>
+			<drop event="Destroy" name="TM1ChickenCoopStage1" count="1"/>
+			<property name="MaxDamage" value="200"/>
+		</block>
+		<block name="TM1ChickenCoopStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1ChickenCoopStage2Desc"/>
+			<property name="CustomIcon" value="hayBaleSquare"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/OutdoorDecor/hayBaleSquarePrefab"/>
+			<property name="TintColor" value="34,139,34"/>
+			<!-- Forest Green -->
+			<property name="CustomIconTint" value="34,139,34"/>
+			<property name="ModelOffset" value="0,-0.2,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1ChickenCoopStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Coop"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="200"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Logging Site Excavation  -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1LoggingSiteStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1LoggingSiteStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1LoggingSiteStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="excavatorClawWhite"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="10"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="@:Entities/Vehicles/ExcavatorClaw/excavatorClawPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0010"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1LoggingSiteStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1LoggingSiteStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1LoggingSiteStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="30"/>
+			<property name="PlantGrowing.Next" value="TM1LoggingSiteStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="excavatorClawWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="10"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="@:Entities/Vehicles/ExcavatorClaw/excavatorClawPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0011"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Logging Site - Active"/>
+			<drop event="Destroy" name="TM1LoggingSiteStage1" count="1"/>
+			<property name="MaxDamage" value="800"/>
+		</block>
+		<block name="TM1LoggingSiteStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1LoggingSiteStage2Desc"/>
+			<property name="CustomIcon" value="excavatorClawWhite"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="10"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="@:Entities/Vehicles/ExcavatorClaw/excavatorClawPrefab.prefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,0.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1LoggingSiteStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Logging"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="800"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Ammo Depot  -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1AmmoWorkstationStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1AmmoWorkstationStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1AmmoWorkstationStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntGunRackLargeGuns02"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/gunrackWallGunsAEmptyPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0012"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1AmmoWorkstationStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1AmmoWorkstationStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1AmmoWorkstationStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="48"/>
+			<property name="PlantGrowing.Next" value="TM1AmmoWorkstationStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntGunRackLargeGuns02"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/gunrackWallGunsAEmptyPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0013"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Ammo Workstation - Processing"/>
+			<drop event="Destroy" name="TM1AmmoWorkstationStage1" count="1"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<block name="TM1AmmoWorkstationStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1AmmoWorkstationStage2Desc"/>
+			<property name="CustomIcon" value="cntGunRackLargeGuns02"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/gunrackWallGunsBPrefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1AmmoWorkstationStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Ammo"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Medical Station  -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1MedicalStationStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1MedicalStationStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value=".0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1MedicalStationStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="standIV"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<!-- Ensure this matches typical placement rules -->
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Furniture/standIVPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0015"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="DisplayInfo" value="Name"/>
+			<drop event="Destroy" name="TM1MedicalStationStage0" count="1"/>
+			<property name="MaxDamage" value="100"/>
+		</block>
+		<block name="TM1MedicalStationStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1MedicalStationStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="900"/>
+			<!-- 15 minutes -->
+			<property name="PlantGrowing.Next" value="TM1MedicalStationStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="standIV"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Furniture/standIVPrefab"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0016"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Medical Station - Preparing Supplies"/>
+			<drop event="Destroy" name="TM1MedicalStationStage1" count="1"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<block name="TM1MedicalStationStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1MedicalStationStage2Desc"/>
+			<property name="CustomIcon" value="standIV"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Furniture/standIVPrefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1MedicalStationStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1Medical"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Grocery Delivery  -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1GroceryNameDelivery">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1GroceryNameDeliveryDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1GroceryDeliveryStageBuy"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="CustomIcon" value="cntFreezerGroceriesMiddleEmptyOpen"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/freezer_store_emptyPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="SortOrder1" value="B850"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="Tags" value="workstationSkill"/>
+			<property name="MaxDamage" value="200"/>
+		</block>
+		<block name="TM1GroceryDeliveryStageBuy">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1GroceryDeliveryStageBuy"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="CustomIcon" value="cntFreezerGroceriesMiddleEmptyOpen"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/freezer_store_emptyPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="SortOrder1" value="B850"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="Tags" value="workstationSkill"/>
+			<property name="MaxDamage" value="200"/>
+			<!-- Adding Upgrade Requirement -->
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TM1GroceryDeliveryStage0"/>
+				<property name="Item" value="TheMeanOne_Money"/>
+				<property name="ItemCount" value="50"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+		</block>
+		<block name="TM1GroceryDeliveryStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1GroceryDelivery0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<!-- Instant upgrade -->
+			<property name="PlantGrowing.Next" value="TM1GroceryDeliveryStage1"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="CustomIcon" value="cntFreezerGroceriesMiddleEmptyOpen"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/freezer_store_emptyPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0001"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="Tags" value="workstationSkill"/>
+			<property name="MaxDamage" value="200"/>
+			<property name="CanPickup" value="true"/>
+			<property name="PickupText" value="[00FF00]Press E to Remove Grocery Delivery Setup"/>
+			<drop event="Destroy" name="TM1GroceryDeliveryStage0" count="1"/>
+		</block>
+		<!-- Grocery Delivery Station Stage 1 -->
+		<block name="TM1GroceryDeliveryStage1">
+			<property name="Extends" value="TheMeanOne_CropGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1GroceryDelivery1Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="30"/>
+			<!-- 30-minute delivery timer -->
+			<property name="PlantGrowing.Next" value="TM1GroceryDeliveryStage2"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="cntFreezerGroceriesMiddleFullClosed"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/freezer_store_emptyPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B900"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="Tags" value="workstationSkill"/>
+			<drop event="Destroy" name="TM1GroceryDeliveryStage1" count="1"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- Grocery Delivery Station Stage 2 -->
+		<block name="TM1GroceryDeliveryStage2">
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1GroceryDelivery2Desc"/>
+			<property name="CustomIcon" value="cntFreezerGroceriesMiddleFullClosed"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="PlacementDistance" value="5"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Commercial/freezer_store_fullPrefab"/>
+			<property name="TintColor" value="556056"/>
+			<property name="CustomIconTint" value="556056"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1GroceryDeliveryStageBuy"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0003"/>
+			<property name="LootList" value="TM1Grocery"/>
+			<property name="Class" value="Loot"/>
+			<property name="MaxDamage" value="500"/>
+		</block>
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<!-- Hydroponics Workstation -->
+		<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+		<block name="TM1HydroStationStage0">
+			<property name="ItemTypeIcon" value="star"/>
+			<property name="Extends" value="TheMeanOne_CropHarvestingMaster"/>
+			<property name="DescriptionKey" value="TM1HydroStage0Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="15"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="PlantGrowing.Next" value="TM1HydroStationStage1"/>
+			<property name="UnlockedBy" value="perkWorkstationExpansion"/>
+			<property name="CustomIcon" value="plantHydroponicAloe"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Plants/plantHydroponicAloePrefab"/>
+			<property name="ModelOffset" value="0,.2,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<drop event="Destroy" name="TM1HydroStationStage0" count="1"/>
+		</block>
+		<block name="TM1HydroStationStage1">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="DescriptionKey" value="TM1HydroStage1Desc"/>
+			<property name="PlantGrowing.GrowthRate" value="35"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="PlantGrowing.Next" value="TM1HydroStationStage2"/>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<property name="CustomIcon" value="plantHydroponicAloe"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Plants/plantHydroponicAloePrefab"/>
+			<property name="ModelOffset" value="0,.2,0"/>
+			<property name="ModelScale" value="1,1,1"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0001"/>
+			<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="CanPickup" value="true"/>
+			<drop event="Destroy" name="TM1HydroStationStage1" count="1"/>
+		</block>
+		<block name="TM1HydroStationStage2">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="DescriptionKey" value="TM1HydroStage2Desc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="plantHydroponicAloe"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Model" value="Entities/Plants/plantHydroponicAloePrefab"/>
+			<property name="ModelOffset" value="0,.2,0"/>
+			<property name="ModelScale" value="1.2,1.2,1.2"/>
+			<!-- Slightly larger scale to indicate maturity -->
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+			<property name="DowngradeBlock" value="TM1HydroStationStage1"/>
+			<property name="SortOrder1" value="B955"/>
+			<property name="SortOrder2" value="0002"/>
+			<property name="LootList" value="TM1HydroponicsSS"/>
+			<property name="Class" value="Loot"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<drop event="Destroy" name="TM1HydroStationStage2" count="1"/>
+		</block>
+	</append>
+</MeanOne>
+
+
