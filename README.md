@@ -1,4 +1,4 @@
-# TheMeanOnesServersideWorkstationExpansionv2---7D2D
+# TheMeanOnesServersideWorkstationExpansionv2-7D2D
 
 # Core Features
 10 Unique Workstations
